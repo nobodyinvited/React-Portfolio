@@ -2,8 +2,8 @@ import { ReactTyped } from "react-typed";
 import { IconUser } from "@tabler/icons-react";
 
 import { profile } from "../../data/profile";
-import Button from "./HeroButton";
-import Avatar from "./Avatar";
+import Button from "./components/HeroButton";
+import Avatar from "./components/Avatar";
 
 export default function Hero() {
   return (

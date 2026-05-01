@@ -1,8 +1,8 @@
 import { profile } from "../../data/profile";
 
-import Hashtags from "./Hashtags";
-import CodeSnippet from "./CodeSnippet";
-import Achievements from "./Achievements";
+import Hashtags from "./components/Hashtags";
+import CodeSnippet from "./components/CodeSnippet";
+import Achievements from "./components/Achievements";
 
 export default function Info() {
   return (

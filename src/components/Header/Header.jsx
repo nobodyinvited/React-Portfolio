@@ -1,8 +1,8 @@
 import { profile } from "../../data/profile";
 
-import Button from "./Button";
-import List from "./List";
-import Link from "./Links";
+import Button from "./components/Button";
+import List from "./components/List";
+import Link from "./components/Links";
 
 export default function Header() {
   return (
@@ -26,7 +26,7 @@ export default function Header() {
         <Button children="Send an email" />
         {/* Social media elements */}
         <div className="flex flex-row gap-3">
-          <Link/>
+          <Link />
           {/* <a
             className="hover:text-blue-600 transition-all"
             href={profile?.link?.github && "https://github.com/nobodyinvited"}
@@ -48,7 +48,6 @@ export default function Header() {
             rel="noopener noreferrer"
           >
           </a> */}
-          
         </div>
       </div>
     </header>

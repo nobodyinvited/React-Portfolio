@@ -1,4 +1,4 @@
-import { navbar } from "../../data/navbar";
+import { navbar } from "../../../data/navbar";
 
 export default function NavbarList() {
   return navbar.map((item) => (
