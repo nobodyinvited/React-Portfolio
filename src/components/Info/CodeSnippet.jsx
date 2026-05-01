@@ -11,7 +11,7 @@ export default function CodeSnippet() {
 }`;
 
   return (
-    <div className="rounded-xl overflow-hidden shadow-xl w-120 bg-[#1e2330]">
+    <div className="rounded-xl overflow-hidden shadow-xl w-fit bg-[#1e2330]">
       <div className="h-max bg-gray-800 px-4 py-3 flex items-center gap-2">
         <span className="w-3 h-3 rounded-full bg-red-500"></span>
         <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
@@ -20,7 +20,12 @@ export default function CodeSnippet() {
       <SyntaxHighlighter
         language="javascript"
         style={monokai}
-        customStyle={{ padding: "24px", backgroundColor: "#1e2330", margin: 0 }}
+        customStyle={{
+          padding: "24px",
+          backgroundColor: "#1e2330",
+          margin: 0,
+          whitespace: "pre",
+        }}
       >
         {code}
       </SyntaxHighlighter>

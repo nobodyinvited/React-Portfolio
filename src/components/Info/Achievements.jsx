@@ -4,7 +4,7 @@ export default function Achievements() {
   return (
     <>
       {profile.achievements.map((item) => (
-        <div className="flex flex-col">
+        <div className="flex flex-col" key={item.value}>
           <h2 className="flex flex-row justify-center font-bold text-2xl">
             {item.value}
           </h2>

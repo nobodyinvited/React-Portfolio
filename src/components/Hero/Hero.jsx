@@ -3,12 +3,12 @@ import { IconUser } from "@tabler/icons-react";
 
 import { profile } from "../../data/profile";
 import Button from "./HeroButton";
-import Avatar from "./Avatar"
+import Avatar from "./Avatar";
 
 export default function Hero() {
   return (
     <>
-      <main className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="flex items-center justify-center gap-24 max-w-5xl mx-auto w-full">
           <Avatar />
           <div className="flex flex-col w-110 gap-4">
@@ -23,14 +23,13 @@ export default function Hero() {
               <Button name="Explore CV" linkTo="./cv.pdf" icon="/>" />
               <Button
                 name="Hire Me!"
-                linkTo="https://linkedin.com/in/syatsunenko/"
+                linkTo={profile.links[1].url}
                 icon={<IconUser stroke={2} />}
               />
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
-

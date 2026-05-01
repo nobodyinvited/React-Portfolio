@@ -11,7 +11,9 @@ export default function Info() {
       <p className="text-center text-gray-400 text-xl">My introduction</p>
       {/* Full layout */}
       <div className="flex justify-between w-full gap-8 px-48 py-16">
-        <CodeSnippet />
+        <div className="shrink-0">
+          <CodeSnippet />
+        </div>
         {/* Right-sided layout */}
         <div className="w-165 flex flex-col gap-4 text-xl">
           {/* Description */}
