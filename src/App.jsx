@@ -1,14 +1,13 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Info from "./components/Info";
-
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Info from "./components/Info/Info";
 
 export default function App() {
   return (
     <div>
-      <Header/>
-      <Hero/>
-      <Info/>
+      <Header />
+      <Hero />
+      <Info />
     </div>
   );
 }

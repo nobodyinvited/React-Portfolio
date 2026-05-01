@@ -1,6 +1,9 @@
 import { ReactTyped } from "react-typed";
-import { profile } from "../data/profile";
 import { IconUser } from "@tabler/icons-react";
+
+import { profile } from "../../data/profile";
+import Button from "./HeroButton";
+import Avatar from "./Avatar"
 
 export default function Hero() {
   return (
@@ -17,7 +20,7 @@ export default function Hero() {
               <ReactTyped strings={[profile.slogan]} typeSpeed={50} />
             </p>
             <div className="flex flex-row gap-4">
-              <Button name="Explore CV" linkTo="./cv.pdf" />
+              <Button name="Explore CV" linkTo="./cv.pdf" icon="/>" />
               <Button
                 name="Hire Me!"
                 linkTo="https://linkedin.com/in/syatsunenko/"
@@ -31,28 +34,3 @@ export default function Hero() {
   );
 }
 
-function Button({ name, linkTo, icon }) {
-  return (
-    <div className="border-2 text-blue-600 border-blue-600 px-5 py-1.5 hover:border-blue-700 hover:bg-blue-700 hover:text-white transition flex flex-row gap-1 items-center">
-      <a
-        className=""
-        href={linkTo}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {name}
-      </a>
-      <a href="">{icon ?? "/>"}</a>
-    </div>
-  );
-}
-
-function Avatar() {
-  return (
-    <img
-      className="w-100 rounded-full border-2 border-gray-200"
-      src="/example.jpg"
-      alt={profile.name}
-    />
-  );
-}
