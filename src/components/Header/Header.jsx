@@ -27,27 +27,6 @@ export default function Header() {
         {/* Social media elements */}
         <div className="flex flex-row gap-3">
           <Link />
-          {/* <a
-            className="hover:text-blue-600 transition-all"
-            href={profile?.link?.github && "https://github.com/nobodyinvited"}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-          </a>
-          <a
-            className="hover:text-blue-600 transition-all"
-            href={profile?.link?.github && "https://github.com/nobodyinvited"}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-          </a>
-          <a
-            className="hover:text-blue-600 transition-all"
-            href="https://t.me/wxsmrzx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a> */}
         </div>
       </div>
     </header>
