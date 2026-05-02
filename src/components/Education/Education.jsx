@@ -1,3 +1,10 @@
+import Section from "../Section/Section";
+
+import { profile } from "../../data/profile";
+import { navLink, navTitle } from "../../data/navbar";
+
 export default function Education() {
-    return <h1>Test</h1>
+    return <Section id={navLink.education} title={navTitle.education} subtitle="My progression">
+        
+    </Section>
 }

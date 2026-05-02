@@ -10,7 +10,7 @@ export default function Info() {
   return (
     <Section
       id={navLink.about}
-      title={navTitle.About}
+      title={navTitle.about_me}
       subtitle="My introduction"
     >
       {/* Full layout */}

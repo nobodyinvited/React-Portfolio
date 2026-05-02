@@ -1,6 +1,6 @@
 export const navbar = [
   { title: "Home", link: "#" },
-  { title: "About", link: "#about" },
+  { title: "About Me", link: "#about" },
   { title: "Education", link: "#education" },
   { title: "Projects", link: "#projects" },
   { title: "Skills", link: "#skills" },
@@ -12,5 +12,8 @@ export const navLink = Object.fromEntries(
 );
 
 export const navTitle = Object.fromEntries(
-  navbar.map((item) => [item.title, item.title]),
+  navbar.map((item) => [
+    item.title.split(" ").join("_").toLowerCase(),
+    item.title,
+  ]),
 );
