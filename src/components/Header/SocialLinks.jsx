@@ -1,6 +1,6 @@
-import { profile } from "../../../data/profile";
+import { profile } from "../../data/profile";
 
-export default function Link() {
+export default function SocialLinks() {
   return profile.links.map((item) => (
     <a
       key={item.type}
