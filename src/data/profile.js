@@ -21,13 +21,25 @@ export const profile = {
     { value: "5+", label: "Technologies learned" },
   ],
 
-  skills: ["html", "css", "java", "javascript", "c#", "sql", "react"],
+  skills: {
+    frontend: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React"],
+    backend: ["SQL", "Java", "Node.js"],
+    tools: ["VS Code", "Intellij IDEA", "Git", "GitHub", "Figma"],
+  },
 
   education: {
     university: "Kharkiv National University of Economics",
     enrollment: 2024,
     graduation: 2028,
     specialty: "Computer Science",
+    courses: [
+      "Algorithms and Data Structure",
+      "Databases",
+      "Object-Oriented Programming",
+      "Computer Networks",
+      "Operating Systems",
+      "English for IT",
+    ],
   },
 
   links: [
@@ -45,6 +57,55 @@ export const profile = {
       type: "telegram",
       url: "https://t.me/wxsmrzx",
       Icon: IconSend,
+    },
+  ],
+
+  certifications: [
+    {
+      id: 1,
+      language: "english",
+      type: "Certificate of Achievement",
+      issuer: "Tandem",
+      // month/day/year
+      date: "2024-08-12",
+      level: "B1",
+      url: "#"
+    },
+    {
+      id: 2,
+      language: "english",
+      type: "Certificate of Participation",
+      issuer: "ENGin",
+      date: "2025-05-12",
+      level: "B1+",
+      url: "#"
+    },    
+    {
+      id: 3,
+      language: "english",
+      type: "Certificate of Participation",
+      issuer: "Uspace English School",
+      date: "2024-05-27",
+      level: "A2",
+      url: "#"
+    },    
+    {
+      id: 4,
+      language: "english",
+      type: "Certificate of Participation",
+      issuer: "Uspace English School",
+      date: "2025-03-17",
+      level: "B1",
+      url: "#"
+    },    
+    {
+      id: 5,
+      language: "english",
+      type: "Certificate of Participation",
+      issuer: "Uspace English School",
+      date: "2025-10-24",
+      level: "B1+",
+      url: "#"
     },
   ],
 };
