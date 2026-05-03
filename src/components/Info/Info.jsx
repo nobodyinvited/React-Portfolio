@@ -1,9 +1,9 @@
 import { profile } from "../../data/profile";
 import { navLink, navTitle } from "../../data/navbar";
 
-import Hashtags from "./components/Hashtags";
-import CodeSnippet from "./components/CodeSnippet";
-import Achievements from "./components/Achievements";
+import Hashtags from "./Hashtags";
+import CodeSnippet from "./CodeSnippet";
+import Achievements from "./Achievements";
 import Section from "../Section/Section";
 
 export default function Info() {
@@ -14,7 +14,7 @@ export default function Info() {
       subtitle="My introduction"
     >
       {/* Full layout */}
-      <div className="flex justify-between w-full gap-8 px-48 py-16">
+      <div className="flex justify-between w-full gap-8 px-48">
         <div className="shrink-0">
           <CodeSnippet />
         </div>

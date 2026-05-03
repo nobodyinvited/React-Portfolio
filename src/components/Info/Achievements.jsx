@@ -1,10 +1,10 @@
-import { profile } from "../../../data/profile";
+import { profile } from "../../data/profile";
 
 export default function Achievements() {
   return (
     <>
       {profile.achievements.map((item) => (
-        <div className="flex flex-col" key={item.value}>
+        <div className="flex flex-col" key={item.label}>
           <h2 className="flex flex-row justify-center font-bold text-2xl">
             {item.value}
           </h2>
@@ -14,3 +14,4 @@ export default function Achievements() {
     </>
   );
 }
+
