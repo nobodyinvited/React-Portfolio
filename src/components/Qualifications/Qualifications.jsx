@@ -18,7 +18,7 @@ export default function Education() {
     <Section
       id={navLink.qualifications}
       title={navTitle.qualifications}
-      subtitle="My progression"
+      subtitle="Applied expertise and key achievements"
     >
       <div className="flex flex-wrap items-end justify-center gap-6">
         <Container

@@ -1,7 +1,9 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Info from "./components/Info/Info";
-import Qualifications from "./components/Qualifications/Qualifications"
+import Qualifications from "./components/Qualifications/Qualifications";
+import Footer from "./components/Footer/Footer";
+import Projects from "./components/Projects/Projects";
 
 export default function App() {
   return (
@@ -9,7 +11,9 @@ export default function App() {
       <Header />
       <Hero />
       <Info />
-      <Qualifications/>
+      <Qualifications />
+      <Projects />
+      <Footer />
     </div>
   );
 }

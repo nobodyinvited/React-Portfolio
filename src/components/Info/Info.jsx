@@ -11,7 +11,7 @@ export default function Info() {
     <Section
       id={navLink.about}
       title={navTitle.about_me}
-      subtitle="My introduction"
+      subtitle="Thinker. Builder. Collaborator."
     >
       {/* Full layout */}
       <div className="flex justify-between w-full gap-8 px-48">
