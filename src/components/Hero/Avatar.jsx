@@ -10,7 +10,7 @@ export default function Avatar() {
         border-2 border-gray-200
         object-cover
       "
-      src="/example.jpg"
+      src={`${import.meta.env.BASE_URL}example.jpg`}
       alt={profile.name}
     />
   );
