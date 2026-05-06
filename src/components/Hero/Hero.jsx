@@ -2,34 +2,47 @@ import { ReactTyped } from "react-typed";
 import { IconUser } from "@tabler/icons-react";
 
 import { profile } from "../../data/profile";
-import Button from "./Button";
+import { Button } from "./Button";
 import Avatar from "./Avatar";
 
 export default function Hero() {
+  const firstName = profile.name.split(" ")[0];
+
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="flex items-center justify-center gap-24 max-w-5xl mx-auto w-full">
+      <section className="min-h-screen flex items-center justify-center px-4">
+        <div className="flex flex-col md:flex-row text-center items-center justify-center gap-12 max-w-5xl mx-auto w-full">
           <Avatar />
-          <div className="flex flex-col w-110 gap-4">
-            <h2 className="font-extrabold text-blue-600 text-5xl">
-              Hi, I'm {profile.name.split(" ")[0]}!
+
+          <div className="flex flex-col text-center md:text-left max-w-md w-full gap-4">
+            <h2 className="font-extrabold text-blue-600 text-3xl md:text-5xl">
+              Hi, I'm {firstName}!
             </h2>
-            <p className="text-xl">{profile.occupation}</p>
-            <p className="text-black text-2xl">
+
+            <p className="text-lg md:text-xl text-gray-700">
+              {profile.occupation}
+            </p>
+
+            <p className="text-lg md:text-2xl text-black min-h-8">
               <ReactTyped strings={[profile.slogan]} typeSpeed={50} />
             </p>
-            <div className="flex flex-row gap-4">
-              <Button name="Explore CV" linkTo="./cv.pdf" icon="/>" />
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:items-start items-center">
+              <Button href="./cv.pdf" icon="/>">
+                Explore CV
+              </Button>
               <Button
-                name="Hire Me!"
-                linkTo={profile.links[1].url}
+                href={
+                  profile.links?.find((l) => l.type === "LinkedIn")?.url || "#"
+                }
                 icon={<IconUser stroke={2} />}
-              />
+              >
+                Hire Me
+              </Button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

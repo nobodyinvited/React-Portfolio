@@ -20,38 +20,47 @@ export default function Education() {
       title={navTitle.qualifications}
       subtitle="Applied expertise and key achievements"
     >
-      <div className="flex flex-wrap items-end justify-center gap-6">
-        <Container
-          title="Skills"
-          description="More about my knowledge of programming tools and frameworks"
-          icon={<IconBriefcase stroke={2} size="40" />}
-        >
-          {Object.keys(profile.skills).map((category) => (
-            <SkillsList key={category} category={category}></SkillsList>
-          ))}
-        </Container>
+      <div className="flex flex-col gap-6">
+        {/* Skills + Education */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <Container
+            title="Skills"
+            description="Programming tools and frameworks"
+            icon={<IconBriefcase stroke={2} size={40} />}
+          >
+            <div className="flex flex-col gap-3">
+              {Object.keys(profile.skills).map((category) => (
+                <SkillsList key={category} category={category} />
+              ))}
+            </div>
+          </Container>
 
-        <Container
-          title="Education"
-          description="More about my university and completed courses, including specialty"
-          icon={<IconSchool stroke={2} size="40" />}
-        >
-          <p className="font-medium">{profile.education.university}</p>
-          <span className="">{profile.education.specialty}</span>
-          <p className="text-gray-500">
-            {profile.education.enrollment} - expected{" "}
-            {profile.education.graduation}
-          </p>
+          <Container
+            title="Education"
+            description="University and specialization"
+            icon={<IconSchool stroke={2} size={40} />}
+          >
+            <div className="flex flex-col gap-2">
+              <p className="font-medium">{profile.education.university}</p>
+              <p className="text-gray-600">{profile.education.specialty}</p>
+              <p className="text-gray-500 text-sm">
+                {profile.education.enrollment} – expected{" "}
+                {profile.education.graduation}
+              </p>
+            </div>
+            <div className="pt-4">
+              <CourseList />
+            </div>
+          </Container>
+        </div>
 
-          <CourseList />
-        </Container>
-
+        {/* Certifications — на всю ширину знизу */}
         <Container
           title="Certifications"
-          description="More about my language knowledge, certifications and passed exams"
-          icon={<IconFileDescription stroke={2} size="40" />}
+          description="Languages, certificates and exams"
+          icon={<IconFileDescription stroke={2} size={40} />}
         >
-          <CertificationsList></CertificationsList>
+          <CertificationsList />
         </Container>
       </div>
     </Section>

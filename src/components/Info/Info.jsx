@@ -13,21 +13,19 @@ export default function Info() {
       title={navTitle.about_me}
       subtitle="Thinker. Builder. Collaborator."
     >
-      {/* Full layout */}
-      <div className="flex justify-between w-full gap-8 px-48">
-        <div className="shrink-0">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 w-full px-4 md:px-10 lg:px-20">
+        {/* Left */}
+        <div className="w-full lg:w-1/2 flex justify-center">
           <CodeSnippet />
         </div>
-        {/* Right-sided layout */}
-        <div className="w-165 flex flex-col gap-4 text-xl">
-          {/* Description */}
+
+        {/* Right */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-6 text-base md:text-lg">
           <p className="text-gray-700">{profile.description}</p>
-          {/* Hashtags */}
+
           <Hashtags />
-          {/* Achievements */}
-          <div className="flex justify-center flex-row gap-7 pt-6">
-            <Achievements />
-          </div>
+
+          <Achievements />
         </div>
       </div>
     </Section>

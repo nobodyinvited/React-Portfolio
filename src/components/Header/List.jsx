@@ -1,15 +1,18 @@
 import { navbar } from "../../data/navbar";
 
 export default function NavbarList() {
-  return navbar.map((item) => (
-    <li key={item.title}>
-      <a
-        className="text-black hover:text-blue-700 transition-all font-medium"
-        href={item.link}
-        rel="noopener noreferrer"
-      >
-        {item.title}
-      </a>
-    </li>
-  ));
+  return (
+    <ul className="flex flex-col md:flex-row gap-4 md:gap-6">
+      {navbar.map((item) => (
+        <li key={item.title}>
+          <a
+            href={item.link}
+            className="text-black hover:text-blue-700 transition font-medium"
+          >
+            {item.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 }

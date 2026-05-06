@@ -1,11 +1,12 @@
 export default function Section({ id, title, subtitle, children }) {
   return (
-    <section className="p-8 flex flex-col gap-2" id={id}>
-      <div className="p-16">
-        <h2 className="text-black font-bold text-center text-5xl">{title}</h2>
-        <p className="text-center py-2 text-gray-400 text-xl">{subtitle}</p>
+    <section id={id} className="py-12 md:py-20 px-4">
+      <div className="text-center mb-10 max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-bold text-black">{title}</h2>
+
+        <p className="text-gray-500 text-base md:text-xl mt-2">{subtitle}</p>
       </div>
-      {children}
+      <div className="max-w-6xl mx-auto w-full">{children}</div>
     </section>
   );
 }

@@ -15,7 +15,7 @@ export const profile = {
   slogan: "Trying to build software, impress others, and make a tasty coffee.",
 
   description:
-    "Frontend developer with an big urge to keep my code clean and get smooth UI. Currently diving deep into React, Next.js, and other modern web technologies. My main task is to provide each user with interactive and catchy websites and applications, ensuring well-maintained, stable, and scalable code.",
+    "Frontend developer with an big urge to keep my code clean and get smooth UI. Currently diving deep into React, Node.js, and other modern web technologies. My main task is to provide each user with interactive and catchy websites and applications, ensuring well-maintained, stable, and scalable code.",
 
   achievements: [
     { value: "1+", label: "Years of experience" },

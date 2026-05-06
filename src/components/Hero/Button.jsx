@@ -1,13 +1,40 @@
-export default function Button({ name, linkTo = "#", icon = "" }) {
+import { profile } from "../../data/profile";
+
+export function Button({ children, href = "#", icon, className = "" }) {
   return (
     <a
-      className="border-2 text-blue-600 border-blue-600 px-5 py-1.5 hover:border-blue-700 hover:bg-blue-700 hover:text-white transition flex flex-row gap-1 items-center"
-      href={linkTo}
+      href={href}
       target="_blank"
       rel="noreferrer"
+      className={`
+        inline-flex w-fit items-center gap-2
+        px-5 py-1.5
+        border-2 border-blue-600
+        text-blue-600
+        hover:bg-blue-700 hover:text-white
+        transition
+        ${className}
+      `}
     >
-      <span>{name}</span>
+      {children}
       {icon && <span>{icon}</span>}
     </a>
+  );
+}
+
+export function ExtendedButtonLinks() {
+  return (
+    <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+      {profile.links.map((item) => (
+        <Button
+          key={item.type}
+          href={item.url}
+          icon={<item.Icon stroke={2} />}
+          className="justify-center"
+        >
+          {item.type}
+        </Button>
+      ))}
+    </div>
   );
 }

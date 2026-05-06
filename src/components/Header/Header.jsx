@@ -5,7 +5,7 @@ import { SocialLinks } from "./SocialLinks";
 
 export default function Header() {
   return (
-    <header className="flex flex-row justify-around items-center bg-white border-b border-b-gray-200 p-5 fixed w-full">
+    <header className="hidden md:flex flex-col md:flex-row justify-around bg-white border-b border-b-gray-200 p-5 fixed w-full">
       {/* Left-sided logotype */}
       <div className="text-center">
         <h1 className="font-semibold text-xl">
@@ -15,15 +15,15 @@ export default function Header() {
       {/* Middle-sided navbar elements */}
       <div>
         <nav>
-          <ul className="flex flex-row gap-4">
+          <ul className="flex flex-col md:flex-row gap-4">
             <List />
           </ul>
         </nav>
       </div>
       {/* Right-sided navbar elements */}
-      <div className="flex flex-row gap-4 items-center">
+      <div className="flex flex-col md:flex-row gap-4">
         {/* Social media elements */}
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <SocialLinks />
         </div>
       </div>

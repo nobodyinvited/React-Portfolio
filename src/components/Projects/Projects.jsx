@@ -1,5 +1,5 @@
 import { profile } from "../../data/profile";
-import Button from "../Header/Button";
+import {Button} from "../Hero/Button"
 import Container from "../Section/components/Container";
 import Section from "../Section/Section";
 
