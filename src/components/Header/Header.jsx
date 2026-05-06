@@ -1,8 +1,7 @@
 import { profile } from "../../data/profile";
 
-import Button from "./Button";
 import List from "./List";
-import SocialLinks from "./SocialLinks";
+import { SocialLinks } from "./SocialLinks";
 
 export default function Header() {
   return (
@@ -23,7 +22,6 @@ export default function Header() {
       </div>
       {/* Right-sided navbar elements */}
       <div className="flex flex-row gap-4 items-center">
-        <Button>Test</Button>
         {/* Social media elements */}
         <div className="flex flex-row gap-3">
           <SocialLinks />
