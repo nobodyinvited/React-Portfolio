@@ -2,7 +2,9 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconSend,
-} from "@tabler/icons-react";
+  IconBrandDiscord,
+  IconClockHour9,
+  } from "@tabler/icons-react";
 
 export const profile = {
   name: "Serhii Yatsunenko",
@@ -22,7 +24,14 @@ export const profile = {
   ],
 
   skills: {
-    frontend: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React"],
+    frontend: [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "JavaScript",
+      "React",
+      "Bootstrap",
+    ],
     backend: ["SQL", "Java", "Node.js"],
     tools: ["VS Code", "Intellij IDEA", "Git", "GitHub", "Figma"],
   },
@@ -44,19 +53,29 @@ export const profile = {
 
   links: [
     {
-      type: "github",
+      type: "GitHub",
       url: "https://github.com/nobodyinvited",
       Icon: IconBrandGithub,
     },
     {
-      type: "linkedin",
+      type: "LinkedIn",
       url: "https://linkedin.com/in/syatsunenko",
       Icon: IconBrandLinkedin,
     },
     {
-      type: "telegram",
+      type: "Telegram",
       url: "https://t.me/wxsmrzx",
       Icon: IconSend,
+    },
+    {
+      type: "Discord",
+      url: "https://discordapp.com/users/639496728160239666",
+      Icon: IconBrandDiscord,
+    },
+    {
+      type: "Wakatime",
+      url: "https://wakatime.com/@nobodyinvited",
+      Icon: IconClockHour9,
     },
   ],
 
@@ -66,10 +85,9 @@ export const profile = {
       language: "english",
       type: "Certificate of Achievement",
       issuer: "Tandem",
-      // month/day/year
       date: "2024-08-12",
       level: "B1",
-      url: "#"
+      url: "#",
     },
     {
       id: 2,
@@ -78,8 +96,8 @@ export const profile = {
       issuer: "ENGin",
       date: "2025-05-12",
       level: "B1+",
-      url: "#"
-    },    
+      url: "#",
+    },
     {
       id: 3,
       language: "english",
@@ -87,8 +105,8 @@ export const profile = {
       issuer: "Uspace English School",
       date: "2024-05-27",
       level: "A2",
-      url: "#"
-    },    
+      url: "#",
+    },
     {
       id: 4,
       language: "english",
@@ -96,8 +114,8 @@ export const profile = {
       issuer: "Uspace English School",
       date: "2025-03-17",
       level: "B1",
-      url: "#"
-    },    
+      url: "#",
+    },
     {
       id: 5,
       language: "english",
@@ -105,7 +123,7 @@ export const profile = {
       issuer: "Uspace English School",
       date: "2025-10-24",
       level: "B1+",
-      url: "#"
+      url: "#",
     },
   ],
 };
