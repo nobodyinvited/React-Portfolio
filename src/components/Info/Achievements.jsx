@@ -8,11 +8,11 @@ export default function Achievements() {
           key={item.label}
           className="flex flex-col items-center text-center"
         >
-          <h2 className="font-bold text-2xl md:text-3xl text-black">
+          <h2 className="font-bold text-2xl md:text-3xl text-black dark:text-white">
             {item.value}
           </h2>
 
-          <p className="text-gray-600 text-sm md:text-base">{item.label}</p>
+          <p className="text-gray-600 dark:text-white text-sm md:text-base">{item.label}</p>
         </div>
       ))}
     </div>

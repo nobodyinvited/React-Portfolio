@@ -2,15 +2,15 @@ import { ExtendedButtonLinks } from "../Hero/Button";
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-4">
+    <footer className="py-12 px-4 dark:bg-[#252525]">
       <div className="max-w-4xl mx-auto">
         {/* Text */}
         <div className="text-center flex flex-col gap-3">
-          <h1 className="font-bold text-4xl md:text-5xl">
+          <h1 className="font-bold text-4xl md:text-5xl text-black dark:text-white">
             Let's work together
           </h1>
 
-          <p className="text-gray-400 text-base md:text-xl">
+          <p className="text-gray-400 dark:text-gray-200 text-base md:text-xl">
             Find me on these platforms for a deeper look at my qualifications
           </p>
         </div>

@@ -7,7 +7,7 @@ export default function NavbarList() {
         <li key={item.title}>
           <a
             href={item.link}
-            className="text-black hover:text-blue-700 transition font-medium"
+            className="text-black dark:text-white hover:text-blue-700 transition font-medium"
           >
             {item.title}
           </a>

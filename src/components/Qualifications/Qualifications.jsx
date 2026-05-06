@@ -21,7 +21,6 @@ export default function Education() {
       subtitle="Applied expertise and key achievements"
     >
       <div className="flex flex-col gap-6">
-        {/* Skills + Education */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Container
             title="Skills"
@@ -40,10 +39,10 @@ export default function Education() {
             description="University and specialization"
             icon={<IconSchool stroke={2} size={40} />}
           >
-            <div className="flex flex-col gap-2">
-              <p className="font-medium">{profile.education.university}</p>
-              <p className="text-gray-600">{profile.education.specialty}</p>
-              <p className="text-gray-500 text-sm">
+            <div className="flex flex-col">
+              <p className="font-medium text-black dark:text-white">{profile.education.university}</p>
+              <p className="text-gray-600 dark:text-white">{profile.education.specialty}</p>
+              <p className="text-gray-500 dark:text-white text-sm">
                 {profile.education.enrollment} – expected{" "}
                 {profile.education.graduation}
               </p>
@@ -54,7 +53,6 @@ export default function Education() {
           </Container>
         </div>
 
-        {/* Certifications — на всю ширину знизу */}
         <Container
           title="Certifications"
           description="Languages, certificates and exams"

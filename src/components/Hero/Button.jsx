@@ -1,20 +1,32 @@
 import { profile } from "../../data/profile";
 
-export function Button({ children, href = "#", icon, className = "" }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={`
+export function Button({
+  children,
+  href = "#",
+  onClick,
+  icon,
+  className = "",
+}) {
+  const baseStyles = `
         inline-flex w-fit items-center gap-2
         px-5 py-1.5
-        border-2 border-blue-600
-        text-blue-600
-        hover:bg-blue-700 hover:text-white
+        rounded-sm
+        bg-blue-700 dark:bg-blue-400 text-white
         transition
         ${className}
-      `}
+      `;
+
+  return onClick ? (
+    <button onClick={onClick} className={baseStyles}>
+      {children}
+      {icon && <span>{icon}</span>}
+    </button>
+  ) : (
+    <a
+      href={href ?? "#"}
+      target="_blank"
+      rel="noreferrer"
+      className={baseStyles}
     >
       {children}
       {icon && <span>{icon}</span>}
@@ -24,7 +36,7 @@ export function Button({ children, href = "#", icon, className = "" }) {
 
 export function ExtendedButtonLinks() {
   return (
-    <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+    <div className="grid grid-cols-3 sm:flex-row flex-wrap gap-3">
       {profile.links.map((item) => (
         <Button
           key={item.type}
